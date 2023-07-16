@@ -6,6 +6,11 @@
     font-family: 'Work Sans', sans-serif;
     /* margin: 0; */
   }
+  .text-light-gray{
+    color: #727272;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
   .btn-primary{
     border-radius: 8px;
     background: #FF900E;
@@ -20,7 +25,7 @@
   /* header style */
   header{
     background: rgba(255, 144, 14, 0.10);
-    padding: 50px 180px;
+    padding: 0px 180px 30px 180px;
   }
   .nav-title{
     color:#131313;
@@ -50,7 +55,7 @@
   .banner-content{
     max-width: 800px;
     /* margin: 100px auto 50px auto; */
-    margin: 50px auto;
+    margin: 40px auto;
     text-align: center;
   }
   .banner-title{
@@ -68,6 +73,49 @@
     width: 100%;
   }
 
+  /* main section */
+main{
+    max-width: 1440px;
+    margin: 80px 200px;
+}
+/* teams */
+.teams-container{
+    display: flex;
+    align-items: center;
+}
+.teams-image-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    width: 50%;
+}
+.teams-image-container img{
+    width: 100%;
+}
+.teams-content{
+    padding-left: 70px;
+    width: 50%;
+}
+.teams-title{
+    font-size: 2.5rem;
+}
+.quick{
+    color: #727272;
+    font-weight: 500;
+}
+.our{
+    color:  #131313;
+    font-weight: 700;
+}
+.team-title-feature{
+    color: #FF900E;
+    font-weight: 700;
+}
+.teams-description{
+    color: #727272;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
 
   /* responsive media queries */
   @media screen and (max-width:576px) {
@@ -77,8 +125,20 @@
     .banner-content{
         margin: 30px 0;
     }
-    nav{
+    nav, .teams-container{
         flex-direction: column;
+    }
+    main{
+        margin: 80px auto;
+    }
+    .teams-image-container{
+        grid-template-columns: 1fr;
+    }
+    .teams-image-container, .teams-content{
+        width: 90%;
+    }
+    .teams-content{
+        padding-left: 0;
     }
   }
 
@@ -87,10 +147,16 @@
     header{
         padding: 30px 100px;
     }
-    .banner-content{
-        /* margin: 100px 0; */
-    }
-    nav{
+    nav, .teams-container{
         flex-direction: column;
+    }
+    main{
+        margin: 80px auto;
+    }
+    .teams-image-container, .teams-content{
+        width: 70%;
+    }
+    .teams-content{
+        padding-left: 0;
     }
   }
